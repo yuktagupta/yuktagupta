@@ -29,7 +29,7 @@ const contactInfo = [
   {
     icon: Linkedin,
     label: "LinkedIn",
-    value: "linkedin.com/in/yuktagupta333",
+    value: "LinkedIn",
     href: "https://linkedin.com/in/yuktagupta333",
     color: "neon-green"
   }
