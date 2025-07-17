@@ -3,6 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, Github, Linkedin } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
+import { useState } from "react";
 import Chat from "./Chat";
 
 const contactInfo = [
@@ -37,6 +40,46 @@ const contactInfo = [
 ];
 
 const Contact = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      await emailjs.send(
+        'service_qfcmqis', // Service ID
+        'template_ynhrlxl', // Template ID
+        {
+          from_name: formData.get('name'),
+          from_email: formData.get('email'),
+          subject: formData.get('subject'),
+          message: formData.get('message'),
+        },
+        'Ble7TJa1jaDi9mPSz' // Public Key
+      );
+
+      toast({
+        title: "Message sent successfully!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      });
+
+      form.reset();
+    } catch (error) {
+      toast({
+        title: "Failed to send message",
+        description: "Please try again or contact me directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
@@ -95,7 +138,7 @@ const Contact = () => {
               Send me a message
             </h3>
             
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
@@ -103,7 +146,9 @@ const Contact = () => {
                   </label>
                   <Input 
                     id="name" 
+                    name="name"
                     placeholder="Your name"
+                    required
                     className="border-border/50 focus:border-primary transition-colors duration-300"
                   />
                 </div>
@@ -113,8 +158,10 @@ const Contact = () => {
                   </label>
                   <Input 
                     id="email" 
+                    name="email"
                     type="email" 
                     placeholder="your.email@example.com"
+                    required
                     className="border-border/50 focus:border-primary transition-colors duration-300"
                   />
                 </div>
@@ -126,7 +173,9 @@ const Contact = () => {
                 </label>
                 <Input 
                   id="subject" 
+                  name="subject"
                   placeholder="Project discussion"
+                  required
                   className="border-border/50 focus:border-primary transition-colors duration-300"
                 />
               </div>
@@ -137,8 +186,10 @@ const Contact = () => {
                 </label>
                 <Textarea 
                   id="message" 
+                  name="message"
                   placeholder="Tell me about your project..."
                   rows={4}
+                  required
                   className="border-border/50 focus:border-primary transition-colors duration-300"
                 />
               </div>
@@ -146,9 +197,10 @@ const Contact = () => {
               <Button 
                 type="submit" 
                 size="lg" 
-                className="w-full bg-gradient-primary hover:opacity-90 transition-all duration-300 font-semibold"
+                disabled={isSubmitting}
+                className="w-full bg-gradient-primary hover:opacity-90 transition-all duration-300 font-semibold disabled:opacity-50"
               >
-                Send Message
+                {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
           </Card>
