@@ -10,7 +10,7 @@ const experiences = [
     period: "Apr 2025 – Present",
     type: "Full-time",
     achievements: [
-      "Cleaned and processed large datasets, improving data reliability by 30%",
+      "Analyzed client data to uncover key business insights. Built interactive dashboards using Power BI and Tableau. Performed data cleaning, transformation, and automation with Python and SQL",
       "Conducted exploratory data analysis and created reports to identify trends and business insights",
       "Built charts and dashboards using tools like Excel, Power BI, or Tableau to communicate findings",
       "Collaborated with cross-functional teams to define KPIs and automate recurring reports"
