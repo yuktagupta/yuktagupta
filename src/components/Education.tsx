@@ -49,7 +49,11 @@ const Education = () => {
                       </h3>
                       <Badge 
                         variant={edu.status === "Completed" ? "default" : "secondary"}
-                        className="w-fit mt-2 lg:mt-0"
+                        className={`w-fit mt-2 lg:mt-0 ${
+                          edu.status === "Completed" 
+                            ? "bg-green-600 text-white hover:bg-green-700 border-green-600" 
+                            : ""
+                        }`}
                       >
                         {edu.status}
                       </Badge>
