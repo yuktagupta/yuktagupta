@@ -5,7 +5,7 @@ import { Calendar, MapPin } from "lucide-react";
 const experiences = [
   {
     title: "Data Analyst",
-    company: "Meena Fintech",
+    company: "Freelance Project",
     location: "Mumbai",
     period: "Apr 2025 – Present",
     type: "Full-time",
