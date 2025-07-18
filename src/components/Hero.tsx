@@ -30,9 +30,12 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 className="bg-gradient-primary hover:opacity-90 transition-all duration-300 font-semibold"
+                asChild
               >
-                <Download className="mr-2 h-5 w-5" />
-                Download Resume
+                <a href="https://drive.google.com/uc?export=download&id=1_LId_2eNkAo-ODW-rKeaFBQsVr9oHkO_" target="_blank" rel="noopener noreferrer">
+                  <Download className="mr-2 h-5 w-5" />
+                  Download Resume
+                </a>
               </Button>
               <Button 
                 variant="outline" 
