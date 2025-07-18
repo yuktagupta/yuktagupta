@@ -1,43 +1,71 @@
-import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import { Database, BarChart3, Brain, Code, Server, Users } from "lucide-react";
+import { 
+  Code2, 
+  Database, 
+  BarChart3, 
+  Server, 
+  Brain,
+  MessageSquare,
+  PuzzleIcon,
+  Users,
+  Target,
+  FileCode,
+  Table,
+  ChartArea,
+  Zap,
+  GitBranch,
+  Layers
+} from "lucide-react";
 
 const skillCategories = [
   {
-    icon: Code,
-    title: "Programming Languages",
-    color: "neon-purple",
-    skills: ["Python", "SQL", "HTML", "CSS"]
+    title: "Languages",
+    skills: [
+      { name: "Python", icon: Code2, color: "text-yellow-400" },
+      { name: "SQL", icon: Database, color: "text-blue-400" },
+      { name: "HTML", icon: FileCode, color: "text-orange-400" },
+      { name: "CSS", icon: Layers, color: "text-blue-500" }
+    ]
   },
   {
-    icon: Database,
-    title: "Libraries & Tools",
-    color: "neon-teal",
-    skills: ["Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn", "SciPy"]
+    title: "Data Science Libraries",
+    skills: [
+      { name: "Pandas", icon: Table, color: "text-green-400" },
+      { name: "NumPy", icon: BarChart3, color: "text-blue-400" },
+      { name: "Matplotlib", icon: ChartArea, color: "text-purple-400" },
+      { name: "Seaborn", icon: BarChart3, color: "text-teal-400" },
+      { name: "Scikit-learn", icon: Brain, color: "text-orange-400" },
+      { name: "SciPy", icon: GitBranch, color: "text-red-400" }
+    ]
   },
   {
-    icon: BarChart3,
+    title: "Machine Learning",
+    skills: [
+      { name: "Regression", icon: Target, color: "text-red-400" },
+      { name: "Classification", icon: Brain, color: "text-purple-400" },
+      { name: "Clustering", icon: PuzzleIcon, color: "text-green-400" },
+      { name: "Feature Engineering", icon: Zap, color: "text-yellow-400" }
+    ]
+  },
+  {
     title: "Visualization Tools",
-    color: "neon-blue",
-    skills: ["Power BI", "Tableau", "QlikView"]
+    skills: [
+      { name: "Power BI", icon: BarChart3, color: "text-yellow-400" },
+      { name: "Tableau", icon: ChartArea, color: "text-blue-400" },
+      { name: "QlikView", icon: BarChart3, color: "text-green-400" }
+    ]
   },
   {
-    icon: Server,
     title: "Frameworks & APIs",
-    color: "neon-green",
-    skills: ["FastAPI"]
+    skills: [
+      { name: "FastAPI", icon: Server, color: "text-green-400" }
+    ]
   },
   {
-    icon: Database,
     title: "Databases",
-    color: "neon-purple",
-    skills: ["PostgreSQL"]
-  },
-  {
-    icon: Users,
-    title: "Soft Skills",
-    color: "neon-teal",
-    skills: ["Communication", "Problem-Solving", "Teamwork", "Adaptability"]
+    skills: [
+      { name: "PostgreSQL", icon: Database, color: "text-blue-400" }
+    ]
   }
 ];
 
@@ -55,33 +83,27 @@ const Skills = () => {
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skillCategories.map((category, index) => {
-            const IconComponent = category.icon;
-            return (
-              <Card key={index} className="p-6 hover:shadow-xl transition-all duration-300 border-border/50 hover:border-primary/50 group animate-fade-in">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className={`p-2 rounded-lg bg-${category.color}/20 group-hover:bg-${category.color}/30 transition-colors duration-300`}>
-                    <IconComponent className={`h-6 w-6 text-${category.color}`} />
-                  </div>
-                  <h3 className="text-lg font-semibold text-foreground">
-                    {category.title}
-                  </h3>
-                </div>
-                
-                <div className="flex flex-wrap gap-2">
-                  {category.skills.map((skill, skillIndex) => (
-                    <Badge 
-                      key={skillIndex} 
-                      variant="secondary"
-                      className="hover:bg-primary hover:text-primary-foreground transition-colors duration-300 cursor-pointer"
-                    >
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </Card>
-            );
-          })}
+          {skillCategories.map((category, index) => (
+            <Card key={index} className="p-6 hover:shadow-xl transition-all duration-300 border-border/50 hover:border-primary/50 group animate-fade-in bg-card/50">
+              <h3 className="text-xl font-bold text-center mb-6 text-foreground">
+                {category.title}
+              </h3>
+              
+              <div className="grid grid-cols-2 gap-4">
+                {category.skills.map((skill, skillIndex) => {
+                  const IconComponent = skill.icon;
+                  return (
+                    <div key={skillIndex} className="flex flex-col items-center p-3 rounded-lg bg-background/50 hover:bg-background/80 transition-all duration-300 group/skill">
+                      <div className={`p-3 rounded-full bg-muted/50 mb-2 group-hover/skill:scale-110 transition-transform duration-300`}>
+                        <IconComponent className={`h-8 w-8 ${skill.color}`} />
+                      </div>
+                      <span className="text-sm font-medium text-center text-foreground">{skill.name}</span>
+                    </div>
+                  );
+                })}
+              </div>
+            </Card>
+          ))}
         </div>
       </div>
     </section>
