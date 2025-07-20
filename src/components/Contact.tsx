@@ -7,81 +7,69 @@ import { useToast } from "@/hooks/use-toast";
 import emailjs from '@emailjs/browser';
 import { useState } from "react";
 import Chat from "./Chat";
-
-const contactInfo = [
-  {
-    icon: Mail,
-    label: "Email",
-    value: "yuktagupta333@gmail.com",
-    href: "mailto:yuktagupta333@gmail.com",
-    color: "neon-teal"
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "+91 9987014007",
-    href: "tel:+919987014007",
-    color: "neon-purple"
-  },
-  {
-    icon: Github,
-    label: "GitHub",
-    value: "Github",
-    href: "https://github.com/yuktagupta",
-    color: "neon-blue"
-  },
-  {
-    icon: Linkedin,
-    label: "LinkedIn",
-    value: "LinkedIn",
-    href: "https://linkedin.com/in/yuktagupta333",
-    color: "neon-green"
-  }
-];
-
+const contactInfo = [{
+  icon: Mail,
+  label: "Email",
+  value: "yuktagupta333@gmail.com",
+  href: "mailto:yuktagupta333@gmail.com",
+  color: "neon-teal"
+}, {
+  icon: Phone,
+  label: "Phone",
+  value: "+91 9987014007",
+  href: "tel:+919987014007",
+  color: "neon-purple"
+}, {
+  icon: Github,
+  label: "GitHub",
+  value: "Github",
+  href: "https://github.com/yuktagupta",
+  color: "neon-blue"
+}, {
+  icon: Linkedin,
+  label: "LinkedIn",
+  value: "LinkedIn",
+  href: "https://linkedin.com/in/yuktagupta333",
+  color: "neon-green"
+}];
 const Contact = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-
     const form = e.currentTarget;
     const formData = new FormData(form);
-
     try {
-      await emailjs.send(
-        'service_qfcmqis', // Service ID
-        'template_ynhrlxl', // Template ID
-        {
-          from_name: formData.get('name'),
-          from_email: formData.get('email'),
-          subject: formData.get('subject'),
-          message: formData.get('message'),
-        },
-        'Ble7TJa1jaDi9mPSz' // Public Key
+      await emailjs.send('service_qfcmqis',
+      // Service ID
+      'template_ynhrlxl',
+      // Template ID
+      {
+        from_name: formData.get('name'),
+        from_email: formData.get('email'),
+        subject: formData.get('subject'),
+        message: formData.get('message')
+      }, 'Ble7TJa1jaDi9mPSz' // Public Key
       );
-
       toast({
         title: "Message sent successfully!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
+        description: "Thank you for reaching out. I'll get back to you soon."
       });
-
       form.reset();
     } catch (error) {
       toast({
         title: "Failed to send message",
         description: "Please try again or contact me directly.",
-        variant: "destructive",
+        variant: "destructive"
       });
     } finally {
       setIsSubmitting(false);
     }
   };
-
-  return (
-    <section className="py-20 bg-background">
+  return <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-4">
@@ -101,28 +89,21 @@ const Contact = () => {
             
             <div className="grid sm:grid-cols-2 gap-4">
               {contactInfo.map((contact, index) => {
-                const IconComponent = contact.icon;
-                return (
-                  <Card key={index} className="p-4 hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/50 group">
-                    <a 
-                      href={contact.href}
-                      target={contact.href.startsWith('http') ? '_blank' : undefined}
-                      rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                      className="flex items-center gap-3"
-                    >
+              const IconComponent = contact.icon;
+              return <Card key={index} className="p-4 hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/50 group">
+                    <a href={contact.href} target={contact.href.startsWith('http') ? '_blank' : undefined} rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined} className="flex items-center gap-3">
                       <div className={`p-2 rounded-lg bg-${contact.color}/20 group-hover:bg-${contact.color}/30 transition-colors duration-300`}>
                         <IconComponent className={`h-5 w-5 text-${contact.color}`} />
                       </div>
                       <div>
                         <p className="text-sm text-muted-foreground">{contact.label}</p>
-                        <p className="text-foreground font-medium group-hover:text-primary transition-colors duration-300">
+                        <p className="text-foreground font-medium group-hover:text-primary transition-colors duration-300 mx-0 px-0 my-0 text-sm">
                           {contact.value}
                         </p>
                       </div>
                     </a>
-                  </Card>
-                );
-              })}
+                  </Card>;
+            })}
             </div>
             
             <div className="mt-8 p-6 bg-card/50 rounded-lg border border-border/50">
@@ -144,26 +125,13 @@ const Contact = () => {
                   <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                     Name
                   </label>
-                  <Input 
-                    id="name" 
-                    name="name"
-                    placeholder="Your name"
-                    required
-                    className="border-border/50 focus:border-primary transition-colors duration-300"
-                  />
+                  <Input id="name" name="name" placeholder="Your name" required className="border-border/50 focus:border-primary transition-colors duration-300" />
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                     Email
                   </label>
-                  <Input 
-                    id="email" 
-                    name="email"
-                    type="email" 
-                    placeholder="your.email@example.com"
-                    required
-                    className="border-border/50 focus:border-primary transition-colors duration-300"
-                  />
+                  <Input id="email" name="email" type="email" placeholder="your.email@example.com" required className="border-border/50 focus:border-primary transition-colors duration-300" />
                 </div>
               </div>
               
@@ -171,35 +139,17 @@ const Contact = () => {
                 <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
                   Subject
                 </label>
-                <Input 
-                  id="subject" 
-                  name="subject"
-                  placeholder="Project discussion"
-                  required
-                  className="border-border/50 focus:border-primary transition-colors duration-300"
-                />
+                <Input id="subject" name="subject" placeholder="Project discussion" required className="border-border/50 focus:border-primary transition-colors duration-300" />
               </div>
               
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
                   Message
                 </label>
-                <Textarea 
-                  id="message" 
-                  name="message"
-                  placeholder="Tell me about your project..."
-                  rows={4}
-                  required
-                  className="border-border/50 focus:border-primary transition-colors duration-300"
-                />
+                <Textarea id="message" name="message" placeholder="Tell me about your project..." rows={4} required className="border-border/50 focus:border-primary transition-colors duration-300" />
               </div>
               
-              <Button 
-                type="submit" 
-                size="lg" 
-                disabled={isSubmitting}
-                className="w-full bg-gradient-primary hover:opacity-90 transition-all duration-300 font-semibold disabled:opacity-50"
-              >
+              <Button type="submit" size="lg" disabled={isSubmitting} className="w-full bg-gradient-primary hover:opacity-90 transition-all duration-300 font-semibold disabled:opacity-50">
                 {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
@@ -207,8 +157,6 @@ const Contact = () => {
         </div>
       </div>
       <Chat />
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
