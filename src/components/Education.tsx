@@ -7,7 +7,7 @@ const education = [
     degree: "MS in Information Technology",
     institution: "University of Mumbai",
     period: "Aug 2023 – Jul 2025",
-    status: "In Progress",
+    status: "Completed",
     icon: GraduationCap
   },
   {
