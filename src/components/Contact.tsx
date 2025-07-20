@@ -26,7 +26,7 @@ const contactInfo = [
   {
     icon: Github,
     label: "GitHub",
-    value: "github.com/yuktagupta",
+    value: "Github",
     href: "https://github.com/yuktagupta",
     color: "neon-blue"
   },
