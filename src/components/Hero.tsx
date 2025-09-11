@@ -17,7 +17,7 @@ const Hero = () => {
                 Yukta Gupta
               </h1>
               <h2 className="text-2xl lg:text-3xl font-semibold text-foreground">
-                Data Analyst | Dashboard Creator | Data Research
+                Data Analyst| Dashboard Creator|Bi Analyst
               </h2>
             </div>
             
