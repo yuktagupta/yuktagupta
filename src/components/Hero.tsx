@@ -22,7 +22,7 @@ const Hero = () => {
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-gradient-primary hover:opacity-90 transition-all duration-300 font-semibold" asChild>
-                <a href="https://drive.google.com/uc?export=download&id=16HqmAdDz2jLYdEtP70nEPp1UQbE9up3A" target="_blank" rel="noopener noreferrer">
+                <a href="https://drive.google.com/uc?export=download&id=1PPtxZG3oV5IWtq-eWDT-HLL-yEPJiZvs" target="_blank" rel="noopener noreferrer">
                   <Download className="mr-2 h-5 w-5" />
                   Download Resume
                 </a>
