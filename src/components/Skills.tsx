@@ -31,7 +31,7 @@ const skillCategories = [
     icon: Database,
     title: "Databases",
     color: "neon-purple",
-    skills: ["PostgreSQL"]
+    skills: ["PostgreSQL", "Microsoft SQL"]
   },
   {
     icon: Users,
