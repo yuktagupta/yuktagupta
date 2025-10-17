@@ -14,31 +14,6 @@ const experiences = [
       "Built interactive dashboards using Power BI and Tableau.",
       "Performed data cleaning, transformation, and automation with Python and SQL."
     ]
-  },
-  {
-    title: "Data Analyst Intern",
-    company: "Cubicus Technology",
-    location: "Mumbai",
-    period: "Jun 2024 – Mar 2025",
-    type: "Internship",
-    achievements: [
-      "Prepared and cleaned large datasets, increasing data accuracy by 25% across key projects",
-      "Supported senior analysts in conducting data analysis and generating business insights",
-      "Helped design dashboards and visual reports using Excel, Power BI, and Tableau",
-      "Collaborated with teams to gather data requirements and deliver ad hoc analytical support"
-    ]
-  },
-  {
-    title: "Data Research Intern",
-    company: "UBS Forums",
-    location: "Mumbai",
-    period: "Sep 2023 – Apr 2024",
-    type: "Internship",
-    achievements: [
-      "Automated data cleaning processes, increasing data accuracy, and reducing manual effort by 20%",
-      "Assisted in preparing research reports and databases for internal use",
-      "Conducted secondary research and data extraction to support business strategy and event planning"
-    ]
   }
 ];
 
