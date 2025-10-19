@@ -10,9 +10,12 @@ const experiences = [
     period: "Apr 2025 – Present",
     type: "Full-time",
     achievements: [
-      "Analyzed client data to uncover key business insights.",
-      "Built interactive dashboards using Power BI and Tableau.",
-      "Performed data cleaning, transformation, and automation with Python and SQL."
+      "Analyzed financial and credit data using Python and SQL for actionable insights.",
+      "Built interactive dashboards in Power BI and Tableau to track key metrics.",
+      "Cleaned and validated large datasets from SQL, Excel, and CSV sources.",
+      "Automated data workflows to enhance reporting efficiency.",
+      "Collaborated with teams to align analytics with business goals.",
+      "Delivered insights that improved credit management and decision-making."
     ]
   }
 ];
