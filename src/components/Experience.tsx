@@ -7,7 +7,7 @@ const experiences = [
     title: "Data Analyst",
     company: "Meena Fintech",
     location: "Mumbai",
-    period: "Apr 2025 – Present",
+    period: "July 2023 – Present",
     type: "Full-time",
     achievements: [
       "Analyzed financial and credit data using Python and SQL for actionable insights.",
