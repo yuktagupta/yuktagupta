@@ -45,7 +45,7 @@ const Hero = () => {
                 </a>
               </Button>
               <Button variant="ghost" size="icon" className="hover:bg-neon-purple hover:text-white transition-all duration-300" asChild>
-                <a href="https://github.com/yuktagupta" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/yuktagupta333" target="_blank" rel="noopener noreferrer">
                   <Github className="h-5 w-5" />
                 </a>
               </Button>

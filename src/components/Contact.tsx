@@ -23,7 +23,7 @@ const contactInfo = [{
   icon: Github,
   label: "GitHub",
   value: "Github",
-  href: "https://github.com/yuktagupta",
+  href: "https://github.com/yuktagupta333",
   color: "neon-blue"
 }, {
   icon: Linkedin,
