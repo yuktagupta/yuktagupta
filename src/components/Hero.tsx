@@ -14,7 +14,7 @@ const Hero = () => {
               <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-primary bg-clip-text text-transparent">
                 Yukta Gupta
               </h1>
-              <h2 className="text-2xl text-foreground font-bold lg:text-3xl font-sans text-left">Turning Complex Data Into Meaningful Stories</h2>
+              <h2 className="text-2xl text-foreground font-bold font-sans text-left lg:text-2xl">Turning Complex Data Into Meaningful Stories</h2>
             </div>
             
             <p className="text-muted-foreground max-w-2xl leading-relaxed text-base">I’m a Data Analyst passionate about transforming raw data into clear insights. Using Python, SQL, Excel, Power BI, and Tableau, I build dashboards, automate reports, and help businesses understand their data better. I’m dedicated to learning, growing, and creating meaningful analytics solutions.</p>

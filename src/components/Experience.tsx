@@ -1,32 +1,20 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin } from "lucide-react";
-
-const experiences = [
-  {
-    title: "Data Analyst Consultant",
-    company: "Meena Fintech",
-    location: "Mumbai",
-    period: "July 2023 – Present",
-    type: "Full-time",
-    achievements: [
-      "Analyzed financial and credit data using Python and SQL for actionable insights.",
-      "Built interactive dashboards in Power BI and Tableau to track key metrics.",
-      "Cleaned and validated large datasets from SQL, Excel, and CSV sources.",
-      "Automated data workflows to enhance reporting efficiency.",
-      "Collaborated with teams to align analytics with business goals.",
-      "Delivered insights that improved credit management and decision-making."
-    ]
-  }
-];
-
+const experiences = [{
+  title: "Data Analyst Consultant",
+  company: "Meena Fintech",
+  location: "Mumbai",
+  period: "July 2023 – Present",
+  type: "Full-time",
+  achievements: ["Analyzed financial and credit data using Python and SQL for actionable insights.", "Built interactive dashboards in Power BI and Tableau to track key metrics.", "Cleaned and validated large datasets from SQL, Excel, and CSV sources.", "Automated data workflows to enhance reporting efficiency.", "Collaborated with teams to align analytics with business goals.", "Delivered insights that improved credit management and decision-making."]
+}];
 const Experience = () => {
-  return (
-    <section className="py-20 bg-background">
+  return <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-4">
-            Work Experience
+             
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             My professional journey in data analysis and business intelligence
@@ -39,8 +27,7 @@ const Experience = () => {
             <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-accent to-neon-blue" />
             
             <div className="space-y-8">
-              {experiences.map((exp, index) => (
-                <div key={index} className="relative flex items-start gap-8">
+              {experiences.map((exp, index) => <div key={index} className="relative flex items-start gap-8">
                   {/* Timeline dot */}
                   <div className="relative z-10 flex-shrink-0">
                     <div className="w-4 h-4 bg-primary rounded-full border-4 border-background shadow-lg" />
@@ -75,22 +62,17 @@ const Experience = () => {
                     </div>
                     
                     <ul className="space-y-2">
-                      {exp.achievements.map((achievement, idx) => (
-                        <li key={idx} className="text-muted-foreground flex items-start gap-2">
+                      {exp.achievements.map((achievement, idx) => <li key={idx} className="text-muted-foreground flex items-start gap-2">
                           <span className="text-primary mt-2 flex-shrink-0">•</span>
                           <span>{achievement}</span>
-                        </li>
-                      ))}
+                        </li>)}
                     </ul>
                   </Card>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Experience;
