@@ -105,10 +105,12 @@ export default {
 				},
 				'glow': {
 					'0%, 100%': {
-						boxShadow: '0 0 20px hsl(var(--primary))'
+						opacity: '0.3',
+						transform: 'scale(1)'
 					},
 					'50%': {
-						boxShadow: '0 0 40px hsl(var(--primary)), 0 0 60px hsl(var(--accent))'
+						opacity: '0.5',
+						transform: 'scale(1.05)'
 					}
 				}
 			},
