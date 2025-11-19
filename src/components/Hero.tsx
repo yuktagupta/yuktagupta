@@ -14,10 +14,10 @@ const Hero = () => {
               <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-primary bg-clip-text text-transparent">
                 Yukta Gupta
               </h1>
-              <h2 className="text-2xl text-foreground font-semibold lg:text-3xl">Data Analyst | Dashboard Creator |              Business Analyst</h2>
+              <h2 className="text-2xl text-foreground font-bold lg:text-3xl font-sans text-left">Turning Complex Data Into Meaningful Stories</h2>
             </div>
             
-            <p className="text-muted-foreground max-w-2xl leading-relaxed text-base">Data Analyst with 2+ years of experience in data cleaning, exploratory data analysis, and dashboard creation using Python, SQL, Power BI, Tableau, and Excel. Proven track record of turning raw data into actionable insights, automating workflows, and supporting strategic business decisions. Adept at working in fast-paced, data-driven environments.</p>
+            <p className="text-muted-foreground max-w-2xl leading-relaxed text-base">I’m a Data Analyst passionate about transforming raw data into clear insights. Using Python, SQL, Excel, Power BI, and Tableau, I build dashboards, automate reports, and help businesses understand their data better. I’m dedicated to learning, growing, and creating meaningful analytics solutions.</p>
             
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4">
