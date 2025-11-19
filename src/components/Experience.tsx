@@ -14,7 +14,7 @@ const Experience = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-4">
-             
+            Experience
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             My professional journey in data analysis and business intelligence
