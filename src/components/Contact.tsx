@@ -7,6 +7,7 @@ import { useToast } from "@/hooks/use-toast";
 import emailjs from '@emailjs/browser';
 import { useState } from "react";
 import Chat from "./Chat";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 const contactInfo = [{
   icon: Mail,
   label: "Email",
@@ -33,10 +34,9 @@ const contactInfo = [{
   color: "neon-green"
 }];
 const Contact = () => {
-  const {
-    toast
-  } = useToast();
+  const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { ref, isVisible } = useScrollAnimation();
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -69,7 +69,7 @@ const Contact = () => {
       setIsSubmitting(false);
     }
   };
-  return <section className="py-20 bg-background">
+  return <section ref={ref} className={`py-20 bg-background transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-4">

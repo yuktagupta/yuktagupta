@@ -1,7 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Download, Github, Linkedin, Mail } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
 const Hero = () => {
-  return <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+  const { ref, isVisible } = useScrollAnimation();
+  
+  return <section ref={ref} className={`min-h-screen flex items-center justify-center relative overflow-hidden transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(168,85,247,0.1),transparent_50%)]" />
       
