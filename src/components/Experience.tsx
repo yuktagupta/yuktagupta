@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 const experiences = [{
   title: "Data Analyst Consultant",
   company: "Meena Fintech",
@@ -10,7 +11,9 @@ const experiences = [{
   achievements: ["Analyzed financial and credit data using Python and SQL for actionable insights.", "Built interactive dashboards in Power BI and Tableau to track key metrics.", "Cleaned and validated large datasets from SQL, Excel, and CSV sources.", "Automated data workflows to enhance reporting efficiency.", "Collaborated with teams to align analytics with business goals.", "Delivered insights that improved credit management and decision-making."]
 }];
 const Experience = () => {
-  return <section className="py-20 bg-background">
+  const { ref, isVisible } = useScrollAnimation();
+  
+  return <section ref={ref} className={`py-20 bg-background transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-4">
