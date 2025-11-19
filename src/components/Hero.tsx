@@ -56,7 +56,7 @@ const Hero = () => {
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-primary rounded-full blur-3xl opacity-30 animate-glow" />
-              <img src="/lovable-uploads/yukta-profile-new.jpg" alt="Yukta Gupta" className="relative w-80 h-80 lg:w-96 lg:h-96 object-cover object-top rounded-full border-4 border-primary shadow-2xl hover:scale-105 transition-transform duration-300" />
+              <img src="/lovable-uploads/yukta-profile-new.jpg" alt="Yukta Gupta" className="relative w-80 h-80 lg:w-96 lg:h-96 object-cover object-top rounded-full border-4 border-primary shadow-[0px_4px_10px_rgba(0,0,0,0.2)] hover:scale-105 transition-transform duration-300" />
             </div>
           </div>
         </div>
