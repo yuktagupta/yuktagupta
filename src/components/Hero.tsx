@@ -44,7 +44,7 @@ const Hero = () => {
                 </a>
               </Button>
               <Button variant="ghost" size="icon" className="hover:bg-neon-blue hover:text-white transition-all duration-300" asChild>
-                <a href="https://linkedin.com/in/yuktagupta333" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/yukta-gupta-analyst/" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="h-5 w-5" />
                 </a>
               </Button>
