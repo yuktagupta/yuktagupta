@@ -3,12 +3,28 @@ import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 const experiences = [{
-  title: "Data Analyst Consultant",
-  company: "Meena Fintech",
-  location: "Mumbai",
-  period: "July 2023 – Present",
-  type: "Full-time",
-  achievements: ["Analyzed financial and credit data using Python and SQL for actionable insights.", "Built interactive dashboards in Power BI and Tableau to track key metrics.", "Cleaned and validated large datasets from SQL, Excel, and CSV sources.", "Automated data workflows to enhance reporting efficiency.", "Collaborated with teams to align analytics with business goals.", "Delivered insights that improved credit management and decision-making."]
+  title: "Data Analyst Intern",
+  company: "Deloitte Australia – Data Analytics Virtual Experience",
+  location: "Remote",
+  period: "Nov 2025",
+  type: "Virtual Simulation, Forage",
+  achievements: [
+    "Investigated 10,000+ transaction records to identify financial anomalies and fraud indicators, improving data accuracy by 25%.",
+    "Developed Tableau dashboards to visualize risk exposure, reducing manual reporting time by 35%.",
+    "Compiled insights using Excel and presented actionable findings to support decision-making processes."
+  ]
+}, {
+  title: "Junior Data Analyst",
+  company: "Quantium – Data Analytics Virtual Experience",
+  location: "Remote",
+  period: "Nov 2025",
+  type: "Virtual Simulation, Forage",
+  achievements: [
+    "Examined large-scale transactional data (100K+ entries) to uncover spending and redemption trends that informed marketing strategies.",
+    "Transformed and validated data using Python (Pandas, NumPy), improving data reliability by 30%.",
+    "Generated Power BI dashboards for customer segmentation, enhancing reporting speed by 25%.",
+    "Communicated insights that guided targeted business campaigns and data-driven product improvements."
+  ]
 }];
 const Experience = () => {
   const { ref, isVisible } = useScrollAnimation();
