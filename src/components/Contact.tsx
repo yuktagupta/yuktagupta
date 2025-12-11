@@ -17,14 +17,14 @@ const contactInfo = [{
 }, {
   icon: Github,
   label: "GitHub",
-  value: "github.com/yuktagupta333",
+  value: "GitHub",
   href: "https://github.com/yuktagupta333",
   color: "neon-blue"
 }, {
   icon: Linkedin,
   label: "LinkedIn",
-  value: "linkedin.com/in/yuktagupta333",
-  href: "https://linkedin.com/in/yuktagupta333",
+  value: "LinkedIn",
+  href: "https://www.linkedin.com/in/yukta-gupta-analyst/",
   color: "neon-green"
 }];
 const Contact = () => {
