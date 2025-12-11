@@ -2,7 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Github, Linkedin } from "lucide-react";
+import { Mail, Github, Linkedin, BookOpen } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from '@emailjs/browser';
 import { useState } from "react";
@@ -26,6 +26,12 @@ const contactInfo = [{
   value: "LinkedIn",
   href: "https://www.linkedin.com/in/yukta-gupta-analyst/",
   color: "neon-green"
+}, {
+  icon: BookOpen,
+  label: "Medium",
+  value: "Medium",
+  href: "https://medium.com/@yuktagupta333",
+  color: "neon-purple"
 }];
 const Contact = () => {
   const { toast } = useToast();
