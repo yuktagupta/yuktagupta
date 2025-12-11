@@ -2,7 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, Github, Linkedin } from "lucide-react";
+import { Mail, Github, Linkedin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from '@emailjs/browser';
 import { useState } from "react";
@@ -15,21 +15,15 @@ const contactInfo = [{
   href: "mailto:yuktagupta333@gmail.com",
   color: "neon-teal"
 }, {
-  icon: Phone,
-  label: "Phone",
-  value: "+91 9987014007",
-  href: "tel:+919987014007",
-  color: "neon-purple"
-}, {
   icon: Github,
   label: "GitHub",
-  value: "Github",
+  value: "github.com/yuktagupta333",
   href: "https://github.com/yuktagupta333",
   color: "neon-blue"
 }, {
   icon: Linkedin,
   label: "LinkedIn",
-  value: "LinkedIn",
+  value: "linkedin.com/in/yuktagupta333",
   href: "https://linkedin.com/in/yuktagupta333",
   color: "neon-green"
 }];

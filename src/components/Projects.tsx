@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Github, ExternalLink } from "lucide-react";
+import { Github } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const projects = [
@@ -9,32 +9,28 @@ const projects = [
     title: "StyleMatch.AI",
     description: "AI-Powered Clothing Color Suggestions Based on Skin Tone Analysis",
     technologies: ["Gemini API", "Next.js", "FastAPI", "Koyeb"],
-    github: "#",
-    demo: "#",
+    github: "https://github.com/yuktagupta333",
     status: "Public"
   },
   {
     title: "HR Analytics Dashboard",
     description: "Delivered insights from 2022 HR data using BI dashboards",
     technologies: ["Power BI", "Tableau", "Excel"],
-    github: "#",
-    demo: "#",
+    github: "https://github.com/yuktagupta333",
     status: "Public"
   },
   {
     title: "Airbnb Data Analysis",
     description: "Trends in pricing, availability, and reviews",
     technologies: ["Python", "Pandas", "Matplotlib", "Seaborn"],
-    github: "#",
-    demo: "#",
+    github: "https://github.com/yuktagupta333",
     status: "Public"
   },
   {
     title: "Reward Redemption Analytics",
     description: "Content-based system using cosine similarity",
     technologies: ["Python", "SQL", "Power BI", "Excel"],
-    github: "#",
-    demo: "#",
+    github: "https://github.com/yuktagupta333",
     status: "Public"
   }
 ];
@@ -83,26 +79,16 @@ const Projects = () => {
                   ))}
                 </div>
                 
-                <div className="flex gap-3">
+                <div className="flex">
                   <Button 
                     variant="outline" 
                     size="sm" 
-                    className="flex-1 border-primary/50 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                    className="w-full border-primary/50 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
                     asChild
                   >
                     <a href={project.github} target="_blank" rel="noopener noreferrer">
                       <Github className="mr-2 h-4 w-4" />
-                      Code
-                    </a>
-                  </Button>
-                  <Button 
-                    size="sm" 
-                    className="flex-1 bg-gradient-primary hover:opacity-90 transition-all duration-300"
-                    asChild
-                  >
-                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Demo
+                      View Code
                     </a>
                   </Button>
                 </div>
