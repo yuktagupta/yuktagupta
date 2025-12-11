@@ -30,9 +30,9 @@ const projects = [
     status: "Public"
   },
   {
-    title: "Movie Recommender System",
+    title: "Reward Redemption Analytics",
     description: "Content-based system using cosine similarity",
-    technologies: ["Python", "Kaggle", "Heroku"],
+    technologies: ["Python", "SQL", "Power BI", "Excel"],
     github: "#",
     demo: "#",
     status: "Public"
